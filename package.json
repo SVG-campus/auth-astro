@@ -42,7 +42,8 @@
 		"astro-compress": "^2.3.6",
 		"astro-icon": "^1.1.5",
 		"lodash.merge": "^4.6.2",
-		"set-cookie-parser": "^2.5.1"
+		"set-cookie-parser": "^2.5.1",
+		"tailwindcss": "^4.0.6"
 	},
 	"keywords": [
 		"astro",
