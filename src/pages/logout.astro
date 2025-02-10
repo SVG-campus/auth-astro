@@ -1,0 +1,16 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SignOut } from '~/components';
+const metadata = { title: 'Logout' };
+---
+
+<Layout metadata={metadata}>
+  <section class="container mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-4">Logout</h1>
+    <div>
+      <SignOut class="px-4 py-2 bg-red-500 text-white rounded">
+        Sign Out
+      </SignOut>
+    </div>
+  </section>
+</Layout>
