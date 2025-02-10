@@ -126,6 +126,16 @@
     is-wsl "^3.1.0"
     which-pm-runs "^1.1.0"
 
+"@astrolib/analytics@^0.6.1":
+  version "0.6.1"
+  resolved "https://registry.npmjs.org/@astrolib/analytics/-/analytics-0.6.1.tgz"
+  integrity sha512-BrOGe88JuprEXhvLg1eJxaGcR9ZzuYPZE00QwcvQ1EBAucODxbg4FJG57G5yoAYjyXjr7GsPy4+46X2jB+64hg==
+
+"@astrolib/seo@^1.0.0-beta.8":
+  version "1.0.0-beta.8"
+  resolved "https://registry.npmjs.org/@astrolib/seo/-/seo-1.0.0-beta.8.tgz"
+  integrity sha512-SpNycspjcjnz6um4Vph0k+SAKgUib7/8qJRCaaahJD1UfLuXKK7E+bmKbnv8QPBTRPZkQW6zFVaZRl5VvnyDfg==
+
 "@auth/core@^0.37.3", "@auth/core@0.34.2":
   version "0.37.3"
   resolved "https://registry.npmjs.org/@auth/core/-/core-0.37.3.tgz"
@@ -748,7 +758,7 @@ astro-icon@^1.1.5:
     "@iconify/types" "^2.0.0"
     "@iconify/utils" "^2.1.30"
 
-astro@*, "astro@^3.0.0 || ^4.0.0 || ^5.0.0", astro@^5.0.0:
+astro@*, "astro@^1.2.1 || ^2.0.0 || ^3.0.0-beta.0 || ^3.0.0 || ^4.0.0 || ^5.0.0-beta.0 || ^5.0.0", "astro@^3.0.0 || ^4.0.0 || ^5.0.0", astro@^5.0.0:
   version "5.2.5"
   resolved "https://registry.npmjs.org/astro/-/astro-5.2.5.tgz"
   integrity sha512-AYXyYkc+c5xbKTm48FyQA91y81nXyNPAaoyafR0LUugE4lAwuvIUcXDBfMzmbuP1lGRvsE33G2oypv6gbGaPFg==
