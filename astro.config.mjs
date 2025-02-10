@@ -9,8 +9,8 @@ export default defineConfig({
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
-        'auth:config': path.resolve(__dirname, './src/config/auth.config.ts'),
-        // ...other aliases if needed
+        'astrowind:config': path.resolve(__dirname, './src/config/astrowind.config.js'),
+        // other aliases as needed...
       },
     },
   },
