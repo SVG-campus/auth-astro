@@ -7,6 +7,7 @@ export default defineConfig({
       alias: {
         '~': path.resolve('./src'),
         'astrowind:config': path.resolve('./src/config/astrowind.config.js'),
+        'auth:config': path.resolve('./src/config/auth.config.ts'),
       },
     },
   },
