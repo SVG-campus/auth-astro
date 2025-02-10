@@ -3,13 +3,13 @@
 export type FullAuthConfig = {
   secret: string;
   providers: any[];
-  // add other properties as needed
+  // Add other auth settings as needed
 };
 
 const config: FullAuthConfig = {
   secret: process.env.AUTH_SECRET || 'default-secret',
   providers: [],
-  // additional configuration properties here
+  // Add additional settings here
 };
 
 export default config;
