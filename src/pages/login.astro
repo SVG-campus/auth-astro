@@ -1,0 +1,17 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import { SignIn } from '~/components';
+const metadata = { title: 'Login' };
+---
+
+<Layout metadata={metadata}>
+  <section class="container mx-auto py-12">
+    <h1 class="text-3xl font-bold mb-4">Login</h1>
+    <div>
+      <!-- For demonstration, render the SignIn button -->
+      <SignIn provider="github" class="px-4 py-2 bg-blue-500 text-white rounded">
+        Sign in with GitHub
+      </SignIn>
+    </div>
+  </section>
+</Layout>
