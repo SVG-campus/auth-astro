@@ -9,8 +9,8 @@ export default defineConfig({
     resolve: {
       alias: {
         '~': path.resolve(__dirname, './src'),
-        // Alias "tailwindcss/nesting" to our empty stub file
-        'tailwindcss/nesting': path.resolve(__dirname, 'src/empty.js'),
+        'astrowind:config': path.resolve(__dirname, './src/config/astrowind.config.js'),
+        // Other aliases...
       },
     },
   },
