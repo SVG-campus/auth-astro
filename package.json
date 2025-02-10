@@ -37,6 +37,8 @@
 		"@astrojs/sitemap": "^3.2.1",
 		"@astrojs/tailwind": "^6.0.0",
 		"@fontsource-variable/inter": "^5.1.1",
+		"astro-compress": "^2.3.6",
+		"astro-icon": "^1.1.5",
 		"set-cookie-parser": "^2.5.1"
 	},
 	"keywords": [
