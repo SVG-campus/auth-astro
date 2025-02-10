@@ -1,14 +1,15 @@
 // src/config/auth.config.ts
+
 export type FullAuthConfig = {
   secret: string;
   providers: any[];
-  // add other auth configuration properties here
+  // add other properties as needed
 };
 
 const config: FullAuthConfig = {
   secret: process.env.AUTH_SECRET || 'default-secret',
   providers: [],
-  // additional configuration as needed
+  // additional configuration properties here
 };
 
 export default config;
