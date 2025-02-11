@@ -22,7 +22,7 @@
 		"astro": ">=4.0.0"
 	},
 	"devDependencies": {
-		"@auth/core": "^0.37.3",
+		"@auth/core": "^0.37.4",
 		"@types/node": "^18.17.1",
 		"@types/set-cookie-parser": "^2.4.2",
 		"astro": "^5.0.0",

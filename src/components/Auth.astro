@@ -1,17 +1,40 @@
 ---
-import { getSession } from '../../server'
-import { type FullAuthConfig } from '../config'
-import authDefaultConfig from '../config/auth.config'
+/* 
+  This Auth.astro component uses Auth.js to fetch the current session based on the 
+  Auth0 provider configuration from our auth config file. If a session exists, it will render 
+  authenticated content; otherwise, it shows a "not logged in" message.
+*/
+
+import { getSession } from '../../server';
+import { type FullAuthConfig } from '../config/auth.config';
+// Import your auth configuration using a relative path:
+import authDefaultConfig from "../config/auth.config";
 
 interface Props {
-	authConfig?: FullAuthConfig
+  authConfig?: FullAuthConfig;
 }
 
-const { authConfig = authDefaultConfig } = Astro.props as Props
+const { authConfig = authDefaultConfig } = Astro.props as Props;
 
-let session = await getSession(Astro.request, authConfig)
+// Get the current session using the Auth.js integration
+let session = await getSession(Astro.request, authConfig);
 ---
 
-<div>
-	<Fragment set:html={Astro.slots.render('default', [session])} />
-</div>
+{/*
+  If the user is authenticated, we render a slot named "authenticated".
+  Otherwise, we render a slot named "unauthenticated".
+  You can also add default UI here, such as links to the sign in/sign out pages.
+*/}
+{session ? (
+  <div>
+    <p>Welcome, {session.user?.name || session.user?.email}!</p>
+    <!-- Authenticated content can be provided via a slot -->
+    <slot name="authenticated" />
+  </div>
+) : (
+  <div>
+    <p>You are not logged in.</p>
+    <!-- Unauthenticated content can be provided via a slot (like a SignIn button) -->
+    <slot name="unauthenticated" />
+  </div>
+)}
