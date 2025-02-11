@@ -2,6 +2,9 @@
 
 import Auth0Provider from '@auth/core/providers/auth0';
 
+/**
+ * FullAuthConfig defines the configuration structure for your authentication.
+ */
 export type FullAuthConfig = {
   /**
    * Base path for auth routes.
@@ -16,23 +19,42 @@ export type FullAuthConfig = {
    * Array of authentication providers.
    */
   providers: any[];
-  // You can add additional properties as needed
+  /**
+   * Option to determine whether to inject API endpoints automatically.
+   * @default true
+   */
+  injectEndpoints?: boolean;
+  // You can add additional properties as needed.
 };
 
+/**
+ * The default authentication configuration using Auth0.
+ * This configuration is used by the auth-astro integration.
+ */
 const config: FullAuthConfig = {
-  // This is the default API endpoint for auth routes
+  // Default API endpoint for auth routes
   prefix: '/api/auth',
-  // Use an environment variable for production secret, with a fallback for development
+  // Use an environment variable for production; fallback to a development secret
   secret: process.env.AUTH_SECRET || 'default-secret',
-  // Set up Auth0 as a provider with your credentials
+  // Configure Auth0 as a provider with your credentials
   providers: [
     Auth0Provider({
       clientId: "FOAKMeRNhVal13d4RhJw3zlhlJr3RmMs",
       clientSecret: "ZBzAiShgFHUGnL_g1ub0_O1Wr5YGGapp4M0VRL49W_FcUiIQQF2vSabvmJecdg5t",
-      // The issuer URL is based on your Auth0 domain
-      issuer: "https://dev-ses1tyrcoxk3nqy2.us.auth0.com"
+      issuer: "https://dev-ses1tyrcoxk3nqy2.us.auth0.com",
     })
-  ]
+  ],
+  // Automatically inject API endpoints if desired
+  injectEndpoints: true,
+};
+
+/**
+ * A helper to merge and set default configuration values.
+ */
+export const defineConfig = (config: FullAuthConfig) => {
+  config.prefix ??= '/api/auth';
+  config.injectEndpoints ??= true;
+  return config;
 };
 
 export default config;
