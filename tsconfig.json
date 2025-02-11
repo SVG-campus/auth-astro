@@ -1,7 +1,15 @@
 {
 	"extends": "astro/tsconfigs/base",
 	"compilerOptions": {
-		"types": ["astro/client"],
-		"moduleResolution": "Node"
+	  "moduleResolution": "nodenext",
+	  "target": "ESNext",
+	  "types": ["astro/client"],
+	  "paths": {
+		"~/*": ["src/*"],
+		"auth:config": ["src/config/auth.config.ts"],
+		"astrowind:config": ["src/config/astrowind.config.js"],
+		"vendor/*": ["vendor/*"]
+	  }
 	}
-}
+  }
+  
