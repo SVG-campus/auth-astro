@@ -8,17 +8,24 @@
 		"node": ">=17.4"
 	},
 	"license": "MIT",
-	"repository": "https://github.com/nowaythatworked/auth-astro.git",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nowaythatworked/auth-astro.git"
+	},
 	"author": "nowaythatworked <jan.czekala99@web.de>",
 	"contributors": [
 		"Otterlord <otterlord.dev@gmail.com>",
 		"tajkirkpatrick"
 	],
 	"scripts": {
-		"format": "prettier --config .prettierrc --ignore-path .prettierignore -w  ."
+		"dev": "tsc --watch",
+		"build": "tsc",
+		"format": "prettier --config .prettierrc --ignore-path .prettierignore -w .",
+		"lint": "eslint .",
+		"prepublishOnly": "npm run build"
 	},
 	"peerDependencies": {
-		"@auth/core": "^0.37.3",
+		"@auth/core": "^0.37.4",
 		"astro": ">=4.0.0"
 	},
 	"devDependencies": {
@@ -26,6 +33,7 @@
 		"@types/node": "^18.17.1",
 		"@types/set-cookie-parser": "^2.4.2",
 		"astro": "^5.0.0",
+		"eslint": "^8.0.0",
 		"next-auth": "^4.24.10",
 		"prettier": "^2.8.6",
 		"prettier-plugin-astro": "^0.8.0",
@@ -47,6 +55,12 @@
 		"set-cookie-parser": "^2.5.1",
 		"tailwindcss": "^4.0.6"
 	},
+	"files": [
+		"dist",
+		"src",
+		"index.ts",
+		"module.d.ts"
+	],
 	"keywords": [
 		"astro",
 		"auth",
